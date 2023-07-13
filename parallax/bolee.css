@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --dark: #fefefe;
+    --dark-txt: #070707;
+    --dark-hvr: #e7e7e7;
+    --dark-trs: #ffffffc6;
+}
+
+.dark {
+    --dark: #070707;
+    --dark-txt: #fefefe;
+    --dark-hvr: #363636;
+    --dark-trs: #1f1f1fc6;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-color: var(--dark);
+    transition: 0.5s;
+}
+
+/*side-bar*/
+
+.side-bar.close {
+    width: 0;
+}
+
+.side-bar.close>* {
+    display: none;
+}
+
+.side-bar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--dark);
+    transition: 0.5s;
+}
+
+.side-bar a {
+    font-size: 1.2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--dark-txt);
+    margin-bottom: 5px;
+}
+
+.kertas {
+    display: flex;
+    flex-direction: column;
+    padding: 10vw;
+}
+
+.buka-sb {
+    display: none;
+    cursor: pointer;
+    padding: 1.5%;
+    color: var(--dark-txt);
+    font-size: 2em;
+}
+
+/*nav*/
+
+.txt {
+    display: none;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--dark-txt);
+    margin-right: 7%;
+    font-size: 2em;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.kiri {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.kanan {
+    display: grid;
+    grid-template-areas:
+        "btn src sw"
+    ;
+    justify-content: start;
+}
+
+.same {
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.cari {
+    border: 1px solid var(--dark-txt);
+    outline: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    padding: 1vw 2.2vw;
+    width: 100%;
+    grid-area: src;
+    margin: 0 2vw;
+}
+
+.btn-search {
+    border-radius: 6px;
+    border: 1px solid var(--dark-txt);
+    grid-area: btn;
+}
+
+.ma {
+    margin-left: 1vw;
+    font-size: 1.5em;
+    display: flex;
+    cursor: pointer;
+    padding: 2vw 2.2vw;
+    color: var(--dark-txt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .ganti i:nth-child(1) {
+    display: flex;
+}
+
+body .ganti i:nth-child(2) {
+    display: none;
+}
+
+body.dark .ganti i:nth-child(2) {
+    display: flex;
+}
+
+body.dark .ganti i:nth-child(1) {
+    display: none;
+}
+
+.hasil {
+    position: absolute;
+    width: 108%;
+    height: fit-content;
+    background-color: var(--dark);
+    top: 110%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--dark-txt);
+    left: 5px;
+}
+
+.card {
+    padding: 5px 10px;
+}
+
+.card:hover {
+    background-color: var(--dark-hvr);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--dark-txt);
+}
+
+/*main*/
+.beda img {
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    right: -10%;
+}
+
+.beda {
+    height: 60vw;
+    padding: 0 3vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.edu {
+    color: var(--dark-txt);
+}
+
+.beda h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.p1 {
+    font-size: 0.5em;
+    font-weight: 400;
+    width: 65%;
+}
+
+.p2 {
+    font-size: 1.5em;
+    margin-top: 1vw;
+    font-weight: 300;
+}
+
+.edu-thm {
+    display: flex;
+    margin-top: 2vw;
+}
+
+.thm {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.thm p {
+    color: var(--dark-txt);
+    font-weight: 700;
+}
+
+.card-thm {
+    background-color: #fefefe;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    box-shadow: 11px 11px 20px #1616166a;
+    color: #070707;
+}
+
+.sama {
+    height: 100vh;
+    background-color: yellow;
+}

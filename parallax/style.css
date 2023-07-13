@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+:root {
+    --dark: #fefefe;
+    --dark-txt: #070707;
+    --dark-hvr: #e7e7e7;
+    --dark-trs: #ffffffc6;
+}
+
+.dark {
+    --dark: #070707;
+    --dark-txt: #fefefe;
+    --dark-hvr: #363636;
+    --dark-trs: #1f1f1fc6;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-color: var(--dark);
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+.bungkus {
+    width: 100%;
+    height: 100%;
+}
+
+/*side bar*/
+.side-bar {
+    position: absolute;
+    display: none;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--dark);
+    width: 0;
+    height: 100vh;
+    z-index: 99;
+}
+
+.side-bar.close>* {
+    display: none;
+}
+
+.buka-sb {
+    display: none;
+    cursor: pointer;
+    padding: 1.5%;
+    color: var(--dark-txt);
+    font-size: 2em;
+}
+
+.side-bar a {
+    text-decoration: none;
+    color: var(--dark-txt);
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 5px 20px;
+}
+
+/*nav*/
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--dark-txt);
+    margin-right: 7%;
+    font-size: 2.2em;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+.kiri {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.txt {
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--dark-txt);
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+.txt:hover {
+    text-decoration: underline;
+}
+
+.kanan {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+}
+
+.same {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    padding-right: 1.75vw;
+}
+
+.cari {
+    border: 1px solid var(--dark-txt);
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    padding: 0.85vw;
+    width: 100%;
+}
+
+.btn-search {
+    border-radius: 10px;
+    border: 1px solid var(--dark-txt);
+}
+
+.ma {
+    margin-left: 1vw;
+    font-size: 1.5em;
+    display: flex;
+    cursor: pointer;
+    padding: 0.85vw;
+    color: var(--dark-txt);
+}
+
+body .ganti i:nth-child(1) {
+    display: flex;
+}
+
+body .ganti i:nth-child(2) {
+    display: none;
+}
+
+body.dark .ganti i:nth-child(2) {
+    display: flex;
+}
+
+body.dark .ganti i:nth-child(1) {
+    display: none;
+}
+
+.hasil {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--dark);
+    top: 110%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--dark-txt);
+}
+
+.card {
+    padding: 10px 20px;
+}
+
+.card:hover {
+    background-color: var(--dark-hvr);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--dark-txt);
+}
+
+/*main*/
+.beda img {
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    right: 0;
+}
+
+.beda {
+    height: 100vh;
+    padding: 0 3vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.edu {
+    color: var(--dark-txt);
+}
+
+.beda h1 {
+    font-size: 5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.p1 {
+    font-size: 2em;
+    font-weight: 400;
+    width: 65%;
+}
+
+.p2 {
+    font-size: 1.5em;
+    margin-top: 1vw;
+    font-weight: 300;
+}
+
+.edu-thm {
+    display: flex;
+    margin-top: 2vw;
+}
+
+.thm {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.thm p {
+    color: var(--dark-txt);
+    font-weight: 700;
+}
+
+.card-thm {
+    background-color: #fefefe;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    box-shadow: 11px 11px 20px #1616166a;
+    color: #070707;
+}
+
+.sama {
+    height: 100vh;
+    background-color: yellow;
+}
+
+@media only screen and (max-width: 1025px) {
+    .txt {
+        display: none;
+    }
+
+    .beda h1 {
+        font-size: 4em;
+    }
+
+    .p1 {
+        font-size: 1.5em;
+    }
+
+    .p2 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 497px) {
+    .kanan {
+        display: grid;
+        grid-template-areas:
+            "btn src sw"
+        ;
+        justify-content: start;
+    }
+
+    .btn-search {
+        grid-area: btn;
+        border-radius: 7px;
+    }
+
+    .cari {
+        grid-area: src;
+        border-radius: 7px;
+    }
+
+    .ganti {
+        grid-area: sw;
+    }
+
+    .same {
+        width: 120%;
+    }
+
+    .ma {
+        margin-left: 0;
+        margin-right: 2vw;
+    }
+
+    .ganti {
+        margin-left: 15vw;
+        margin-right: 0;
+    }
+
+    .hasil {
+        border-radius: 7px;
+    }
+}
