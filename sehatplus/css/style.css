@@ -134,6 +134,7 @@ img {
     margin: 0 10px;
     font-size: 1.2em;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .ganti-warna {
@@ -238,6 +239,20 @@ body.dark .ganti-warna i:nth-child(1) {
     overflow: hidden;
 }
 
+.teks-art-prdk {
+    padding: 10px;
+}
+
+.kategori-art-prdk {
+    background-color: #00ddff3e;
+    padding: 10px 15px;
+    width: fit-content;
+    color: #00a6ff;
+    font-size: 0.9em;
+    border: 1px solid #00a6ff;
+    margin-top: 10px;
+}
+
 .kertas-pk {
     width: 100px;
     height: 130px;
@@ -277,10 +292,6 @@ body.dark .ganti-warna i:nth-child(1) {
         width: 100%;
     }
 
-    .judul-dne {
-        font-size: 4em;
-    }
-
     .para-dne {
         font-size: 1.5em;
         width: 80%;
@@ -316,11 +327,23 @@ body.dark .ganti-warna i:nth-child(1) {
     }
 
     .teks-art-prdk {
+        padding: 5px;
         font-size: 0.9em;
+    }
+
+    .kategori-art-prdk {
+        padding: 5px 10px;
+        width: fit-content;
+        font-size: 0.7em;
+        margin-top: 3px;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .nav {
+        padding: 1.5vw 3vw;
+    }
+
     .judul-dne {
         font-size: 2.5em;
     }
@@ -344,7 +367,7 @@ body.dark .ganti-warna i:nth-child(1) {
     }
 
     .bungkus-dne {
-        margin: 0 5vw;
+        margin: 0 3vw;
     }
 
     .kertas-art-prdk {
@@ -362,5 +385,13 @@ body.dark .ganti-warna i:nth-child(1) {
 
     .teks-art-prdk {
         font-size: 0.8em;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bg {
+        background-size: 65%;
     }
 }
