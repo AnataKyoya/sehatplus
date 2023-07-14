@@ -208,7 +208,6 @@ body.dark .ganti-warna i:nth-child(1) {
 
 .pigura {
     height: fit-content;
-    flex-wrap: wrap;
 }
 
 .bungkus-artikel-alat {
@@ -230,10 +229,6 @@ body.dark .ganti-warna i:nth-child(1) {
     font-weight: 400;
 }
 
-.alat {
-    padding-left: 0;
-}
-
 .head-art-alt {
     padding: 2vw;
     padding-left: 0;
@@ -244,6 +239,10 @@ body.dark .ganti-warna i:nth-child(1) {
     height: 44vh;
     overflow-x: auto;
     position: relative;
+}
+
+.lembar-art-alt.alat {
+    height: 30vh;
 }
 
 .abs {
@@ -302,8 +301,8 @@ body.dark .ganti-warna i:nth-child(1) {
 }
 
 .img-pk {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
@@ -313,6 +312,76 @@ body.dark .ganti-warna i:nth-child(1) {
     text-align: center;
     font-size: 0.9em;
     font-weight: 600;
+}
+
+.kategori-prdk {
+    width: 30vh;
+    font-size: 0.9em;
+    position: relative;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.head-kategori {
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-kategori {
+    position: absolute;
+    background-color: #fefefe;
+    width: 100%;
+    top: 110%;
+    z-index: 1;
+}
+
+.teks-kategori {
+    margin: 5px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.bungkus-produk {
+    position: relative;
+    overflow-x: auto;
+    height: 80vh;
+}
+
+.lembar-produk {
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+}
+
+.kertas-produk {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 30vh;
+    height: 48vh;
+    background-color: #fefefe;
+}
+
+.img-produk {
+    width: 100%;
+    height: 60%;
+}
+
+.harga {
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.pigura-produk {
+    padding: 0 2vw;
+}
+
+.keranjang {
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -357,10 +426,6 @@ body.dark .ganti-warna i:nth-child(1) {
         font-size: 0.9em;
     }
 
-    .alat {
-        padding-left: 2vw;
-    }
-
     .head-art-alt {
         font-size: 1.1em;
     }
@@ -371,7 +436,7 @@ body.dark .ganti-warna i:nth-child(1) {
 
     .teks-art-prdk {
         padding: 5px;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .kategori-art-prdk {
@@ -380,11 +445,22 @@ body.dark .ganti-warna i:nth-child(1) {
         font-size: 0.7em;
         margin-top: 3px;
     }
+
+    .img-pk {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 @media screen and (max-width: 720px) {
     .nav {
         padding: 1.5vw 3vw;
+    }
+
+    .kiri,
+    .opsi {
+        justify-content: center;
+        align-items: center;
     }
 
     .judul-dne {
@@ -425,7 +501,7 @@ body.dark .ganti-warna i:nth-child(1) {
     }
 
     .teks-art-prdk {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     ::-webkit-scrollbar {
@@ -435,10 +511,28 @@ body.dark .ganti-warna i:nth-child(1) {
     .bg {
         background-size: 50%;
     }
+
+    .title-pk {
+        font-size: 0.8em;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .bg {
         display: none;
+    }
+
+    .kertas-produk {
+        width: 20vh;
+        height: 38vh;
+    }
+
+    .img-produk {
+        width: 100%;
+        height: 55%;
+    }
+
+    .harga {
+        font-size: 0.9em;
     }
 }
