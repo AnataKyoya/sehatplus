@@ -4,6 +4,41 @@ $(document).ready(function () {
         $("body").toggleClass("dark");
     })
 
+    // Rumah sakit terdekat
+    $(".trst").click(function (e) {
+        getLocation();
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        };
+
+        function showPosition(position) {
+            window.open('https://www.google.com/maps/search/rumah+sakit/@' + position.coords.latitude + ',' + position.coords.longitude + ',18.26z/data=!4m6!2m5!3m4!2s-3.483108,' + position.coords.longitude + '!4m2!1d' + position.coords.longitude + '!2d' + position.coords.latitude + '?entry=ttu', '_blank')
+        };
+
+    });
+
+    $(".tat").click(function (e) {
+        getLocation();
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        };
+
+        function showPosition(position) {
+            window.open('https://www.google.com/maps/search/apotek/@' + position.coords.latitude + ',' + position.coords.longitude + ',18.26z/data=!4m6!2m5!3m4!2s-3.483108,' + position.coords.longitude + '!4m2!1d' + position.coords.longitude + '!2d' + position.coords.latitude + '?entry=ttu', '_blank')
+        };
+
+    });
+
     // pencarian
     var href = $(".href");
     $("#cari").keyup(() => {
