@@ -335,6 +335,7 @@ body.dark .ganti-warna i:nth-child(1) {
     font-size: 0.8em;
     border: 1px solid #00a6ff;
     margin-top: 5px;
+    border-radius: 5px;
 }
 
 .kertas-pk {
