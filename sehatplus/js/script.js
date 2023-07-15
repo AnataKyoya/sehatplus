@@ -22,6 +22,23 @@ $(document).ready(function () {
 
     });
 
+    var icon = $(".obj"),
+        a = 0,
+        b = 0.2
+
+    for (let i = 0; i < icon.length; i++) {
+        const move = icon[i];
+        setInterval(() => {
+            a = a + b;
+
+            move.style = "rotate:" + a + "deg;"
+
+            if (a == 360) {
+                a = 0
+            }
+        }, 1)
+    }
+
     $(".tat").click(function (e) {
         getLocation();
 
